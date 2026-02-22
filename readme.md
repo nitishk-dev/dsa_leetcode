@@ -1,7 +1,7 @@
 ## …or create a new repository on the command line
 echo "# dsa_leetcode" >> README.md
 git init
-git add README.md
+git add .
 git commit -m "first commit"
 git branch -M main
 git remote add origin https://github.com/nitishk-dev/dsa_leetcode.git
