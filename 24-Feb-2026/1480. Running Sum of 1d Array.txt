@@ -1,5 +1,5 @@
 /*
-    ===Pseudocode===
+    ====Pseudocode====
     1) First we create new arr called *result*
     2) We take a variable *sum* to store the running total
     3) A loop runs from the beginning of the array to the end
