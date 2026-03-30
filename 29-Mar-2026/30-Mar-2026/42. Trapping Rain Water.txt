@@ -1,0 +1,47 @@
+
+
+/*
+* Start by initializing two pointers, left at 0 and right at n-1.
+* Initialize lefMax and rightMax as 0;
+* Initialize water as 0.
+
+* While left is less than right:
+  * If height[left] is less than height[right]:
+    * If height is greater than or equal to leftMax, update leftMax.
+    * Else add leftMax minus height[left] to water
+    * Move left pointer to the right.
+  * Else:
+    * if height[right] is greater than or equal to rightMax, update rightMax.
+    * Else add rightMax minus height[right] to water. 
+    * Move right pointer to the left.
+=> Return total water.
+*/
+
+
+
+class Solution {
+    public int trap(int[] height) {
+        int left = 0, right = height.length - 1;
+        int leftMax = 0, rightMax = 0;
+        int water = 0;
+
+        while(left < right){
+            if(height[left] < height[right]){
+                if(height[left] >= leftMax){
+                    leftMax = height[left];
+                }else{
+                    water += leftMax - height[left];
+                }
+                left++;
+            }else{
+                if(height[right] >= rightMax){
+                    rightMax = height[right];
+                }else{
+                    water += rightMax - height[right];
+                }
+                right--;
+            }
+        }
+        return water;
+    }
+}
